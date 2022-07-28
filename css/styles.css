@@ -364,6 +364,8 @@ img {
     visibility: hidden;
     pointer-events: none;
 }
+
+
 /*Section*/
 .section, .section-benefits {
     background-color:var(--white-color);     
@@ -554,13 +556,69 @@ address {
 
     transition: color var(--animation);
 }
-.footer-title {
+.footer-title, .footer-form-title {
         font-weight: 700;
         font-size: 14px;
         line-height: 1.14;
         text-transform: uppercase;
         color:var(--white-color);
         margin-bottom: 20px;
+}
+.footer-form-send {
+    margin-left: 23px;
+}
+.form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+   
+}
+.form-footer-input {
+    width: 358px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+}
+.form-footer-input[placeholder="E-mail"] {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    text-transform: none;
+    
+    color: rgba(255, 255, 255, 0.6);
+}
+.footer-form-btn {
+    background-color: var(--accent);
+    color: var(--white-color);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 10px 28px;
+    margin: 0 auto;
+    min-width: 200px;
+    max-width: 240px;
+    min-height: 50px;
+    border: 1px transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.footer-form-icon {
+    fill: var(--white-color);
 }
 /*Portfolio page*/
 .galery .link {
@@ -819,4 +877,23 @@ footer .socials-link:focus {
 .portfolio-thumb:hover .portfolio-overlay {
     transform: translateY(0);
     opacity: 1;
+}
+/*Форма модального вікна*/
+.modal {
+    padding: 40px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+
+}
+
+.form-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: var(--title-text-color);
 }
