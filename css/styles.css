@@ -73,6 +73,18 @@ img {
     margin-right: auto;
     /*outline: 2px solid teal;*/
 }
+.visuaaly-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
 /* Header*/
 .page-header {
     position: fixed;
@@ -316,8 +328,8 @@ img {
             left: 50%;
             transform: translate(-50%, -50%);
         
-    width: 528px;
-    height: 581px;
+    min-width: 528px;
+    min-height: 581px;
     background-color: var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -882,18 +894,107 @@ footer .socials-link:focus {
 .modal {
     padding: 40px;
 }
-
-.form-group{
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-
+.register-form {
+    text-align: center;
 }
+.register-form-group{
+    margin-bottom: 20px;
+}
+.register-form-wrap {
+    position: relative;
+    display: block;
+    margin-bottom: 28px;
+}
+.register-form-wrap:last-child {
+    margin-bottom: 0;
+}
+.register-form-label {
+    display: block;
+    text-align: left;
+    margin-bottom: 4px;
+}
+.register-form-input,
+.register-form-textarea {
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 10px;
+    padding-left: 12px;
 
-.form-title {
+    outline: transparent;
+}
+.register-form-input:focus{
+border-color: var(--accent);
+}
+.register-form-input:focus ~ .register-form-icon {
+    color: var(--accent);
+}
+.register-form-icon {
+    position: absolute;
+    bottom:11px;
+    left:12px;
+}
+.register-form-title {
+    display: block;
+    margin-bottom: 12px;
+
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
     color: var(--title-text-color);
+}
+
+.register-form-agreement{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-bottom: 30px;
+}
+.register-form-agreement-text {
+    font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71;
+        color: var(--primary-text-color);
+
+        user-select: none;
+        text-underline-position: under;
+}
+.register-icon-check{
+    opacity: 0;   
+    transition: opacity var(--animation);
+}
+.register-checkbox:checked + .register-icon .register-icon-uncheck {
+    opacity: 0;
+}
+.register-checkbox:checked + .register-icon .register-icon-check {
+    opacity: 1;
+}
+.register-form-agreement-link {
+    color: var(--accent);
+}
+.register-form-btn{
+    display: flex;
+    align-items: center;
+    padding: 10px 52px;
+
+    background-color: var(--accent);
+    color: var(--white-color);
+        font-family: inherit;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        text-align: center;
+        letter-spacing: 0.06em;
+        cursor: pointer;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        margin: 0 auto;
+        min-width: 200px;
+        max-width: 240px;
+        min-height: 50px;
+        border: 1px transparent;
+
 }
